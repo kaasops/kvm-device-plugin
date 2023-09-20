@@ -18,7 +18,7 @@ func main() {
 		// This should be deprecated if the API allows for shared resources in the future
 		maxDevices = 1000
 	)
-	device := device_manager.NewGenericDevicePlugin(deviceName, devicePath, maxDevices, "", (deviceName != "kvm"))
+	device := device_manager.NewGenericDevicePlugin(deviceName, devicePath, maxDevices, "rw", (deviceName != "kvm"))
 	stop := make(chan struct{})
 	if err := device.Start(stop); err != nil {
 		log.Fatal(err)
