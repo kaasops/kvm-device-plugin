@@ -7,9 +7,17 @@ import (
 )
 
 func main() {
-	deviceName := "kvm"
-	devicePath := "/dev/kvm"
-	maxDevices := 100
+	const (
+		deviceName = "kvm"
+		devicePath = "/dev/kvm"
+
+		// From KubeVirt:
+
+		// TODO: the Device Plugin API does not allow for infinitely available (shared) devices
+		// so the current approach is to register an arbitrary number.
+		// This should be deprecated if the API allows for shared resources in the future
+		maxDevices = 1000
+	)
 	device := device_manager.NewGenericDevicePlugin(deviceName, devicePath, maxDevices, "", (deviceName != "kvm"))
 	stop := make(chan struct{})
 	if err := device.Start(stop); err != nil {
