@@ -1,6 +1,6 @@
 module github.com/kaasops/kvm-device-plugin
 
-go 1.19.1
+go 1.19
 
 require kubevirt.io/kubevirt v1.0.0
 
