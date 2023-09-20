@@ -10,9 +10,9 @@ COPY main.go main.go
 
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=$TARGETARCH go build -a -o kvm-device-plugin main.go
 
-FROM gcr.io/distroless/static:nonroot
+FROM alpine:3.18
 WORKDIR /
 COPY --from=builder /workspace/kvm-device-plugin .
-USER 65532:65532
+RUN mkdir -p /var/lib/kubelet/device-plugins/
 
 ENTRYPOINT ["/kvm-device-plugin"]
