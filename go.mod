@@ -1,46 +1,6 @@
 module github.com/kaasops/kvm-device-plugin
 
-go 1.21.0
-
-replace (
-	github.com/golang/glog => ./staging/src/github.com/golang/glog
-	github.com/opencontainers/selinux => github.com/opencontainers/selinux v1.6.0
-	github.com/openshift/api => github.com/openshift/api v0.0.0-20191219222812-2987a591a72c
-	github.com/openshift/client-go => github.com/openshift/client-go v0.0.0-20210112165513-ebc401615f47
-	github.com/operator-framework/operator-lifecycle-manager => github.com/operator-framework/operator-lifecycle-manager v0.0.0-20190128024246-5eb7ae5bdb7a
-
-	k8s.io/api => k8s.io/api v0.26.4
-	k8s.io/apiextensions-apiserver => k8s.io/apiextensions-apiserver v0.26.4
-	k8s.io/apimachinery => k8s.io/apimachinery v0.26.4
-	k8s.io/apiserver => k8s.io/apiserver v0.26.4
-	k8s.io/cli-runtime => k8s.io/cli-runtime v0.26.4
-	k8s.io/client-go => k8s.io/client-go v0.26.4
-	k8s.io/cloud-provider => k8s.io/cloud-provider v0.26.4
-	k8s.io/cluster-bootstrap => k8s.io/cluster-bootstrap v0.26.4
-	k8s.io/code-generator => k8s.io/code-generator v0.26.4
-	k8s.io/component-base => k8s.io/component-base v0.26.4
-	k8s.io/cri-api => k8s.io/cri-api v0.26.4
-	k8s.io/csi-translation-lib => k8s.io/csi-translation-lib v0.26.4
-	k8s.io/klog => k8s.io/klog v0.4.0
-	k8s.io/kube-aggregator => k8s.io/kube-aggregator v0.26.4
-	k8s.io/kube-controller-manager => k8s.io/kube-controller-manager v0.26.4
-	k8s.io/kube-openapi => k8s.io/kube-openapi v0.0.0-20221012153701-172d655c2280
-	k8s.io/kube-proxy => k8s.io/kube-proxy v0.26.4
-	k8s.io/kube-scheduler => k8s.io/kube-scheduler v0.26.4
-	k8s.io/kubectl => k8s.io/kubectl v0.26.4
-	k8s.io/kubelet => k8s.io/kubelet v0.26.4
-	k8s.io/legacy-cloud-providers => k8s.io/legacy-cloud-providers v0.26.4
-	k8s.io/metrics => k8s.io/metrics v0.26.4
-	k8s.io/node-api => k8s.io/node-api v0.26.4
-	k8s.io/sample-apiserver => k8s.io/sample-apiserver v0.26.4
-	k8s.io/sample-cli-plugin => k8s.io/sample-cli-plugin v0.26.4
-	k8s.io/sample-controller => k8s.io/sample-controller v0.26.4
-
-	kubevirt.io/api => ./staging/src/kubevirt.io/api
-	kubevirt.io/client-go => ./staging/src/kubevirt.io/client-go
-
-	sigs.k8s.io/controller-runtime => sigs.k8s.io/controller-runtime v0.6.2
-)
+go 1.19.1
 
 require kubevirt.io/kubevirt v1.0.0
 
@@ -86,17 +46,52 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	k8s.io/api v0.27.1 // indirect
-	k8s.io/apiextensions-apiserver v0.26.4 // indirect
+	k8s.io/apiextensions-apiserver v0.26.3 // indirect
 	k8s.io/apimachinery v0.27.1 // indirect
 	k8s.io/client-go v12.0.0+incompatible // indirect
 	k8s.io/klog/v2 v2.90.1 // indirect
 	k8s.io/kube-openapi v0.0.0-20230501164219-8b0f38b5fd1f // indirect
 	k8s.io/utils v0.0.0-20230505201702-9f6742963106 // indirect
-	kubevirt.io/api v0.0.0-00010101000000-000000000000 // indirect
-	kubevirt.io/client-go v0.0.0-00010101000000-000000000000 // indirect
+	kubevirt.io/api v1.0.0 // indirect
+	kubevirt.io/client-go v1.0.0 // indirect
 	kubevirt.io/containerized-data-importer-api v1.57.0-alpha1 // indirect
 	kubevirt.io/controller-lifecycle-operator-sdk/api v0.0.0-20220329064328-f3cc58c6ed90 // indirect
 	sigs.k8s.io/json v0.0.0-20221116044647-bc3834ca7abd // indirect
 	sigs.k8s.io/structured-merge-diff/v4 v4.2.3 // indirect
 	sigs.k8s.io/yaml v1.3.0 // indirect
+)
+
+replace (
+	github.com/opencontainers/selinux => github.com/opencontainers/selinux v1.6.0
+	github.com/openshift/api => github.com/openshift/api v0.0.0-20191219222812-2987a591a72c
+	github.com/openshift/client-go => github.com/openshift/client-go v0.0.0-20210112165513-ebc401615f47
+	github.com/operator-framework/operator-lifecycle-manager => github.com/operator-framework/operator-lifecycle-manager v0.0.0-20190128024246-5eb7ae5bdb7a
+
+	k8s.io/api => k8s.io/api v0.26.3
+	k8s.io/apiextensions-apiserver => k8s.io/apiextensions-apiserver v0.26.3
+	k8s.io/apimachinery => k8s.io/apimachinery v0.26.3
+	k8s.io/apiserver => k8s.io/apiserver v0.26.3
+	k8s.io/cli-runtime => k8s.io/cli-runtime v0.26.3
+	k8s.io/client-go => k8s.io/client-go v0.26.3
+	k8s.io/cloud-provider => k8s.io/cloud-provider v0.26.3
+	k8s.io/cluster-bootstrap => k8s.io/cluster-bootstrap v0.26.3
+	k8s.io/code-generator => k8s.io/code-generator v0.26.3
+	k8s.io/component-base => k8s.io/component-base v0.26.3
+	k8s.io/cri-api => k8s.io/cri-api v0.26.3
+	k8s.io/csi-translation-lib => k8s.io/csi-translation-lib v0.26.3
+	k8s.io/klog => k8s.io/klog v0.4.0
+	k8s.io/kube-aggregator => k8s.io/kube-aggregator v0.26.3
+	k8s.io/kube-controller-manager => k8s.io/kube-controller-manager v0.26.3
+	k8s.io/kube-openapi => k8s.io/kube-openapi v0.0.0-20221012153701-172d655c2280
+	k8s.io/kube-proxy => k8s.io/kube-proxy v0.26.3
+	k8s.io/kube-scheduler => k8s.io/kube-scheduler v0.26.3
+	k8s.io/kubectl => k8s.io/kubectl v0.26.3
+	k8s.io/kubelet => k8s.io/kubelet v0.26.3
+	k8s.io/legacy-cloud-providers => k8s.io/legacy-cloud-providers v0.26.3
+	k8s.io/metrics => k8s.io/metrics v0.26.3
+	k8s.io/node-api => k8s.io/node-api v0.26.3
+	k8s.io/sample-apiserver => k8s.io/sample-apiserver v0.26.3
+	k8s.io/sample-cli-plugin => k8s.io/sample-cli-plugin v0.26.3
+	k8s.io/sample-controller => k8s.io/sample-controller v0.26.3
+	sigs.k8s.io/controller-runtime => sigs.k8s.io/controller-runtime v0.6.2
 )
