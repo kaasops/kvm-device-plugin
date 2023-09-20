@@ -29,6 +29,7 @@ spec:
       serviceAccountName: kvm-device-plugin
       containers:
       - name: kvm-device-plugin
+        imagePullPolicy: Always
         image: docker.io/kaasops/kvm-device-plugin:v1.0.0
         securityContext:
           privileged: true
