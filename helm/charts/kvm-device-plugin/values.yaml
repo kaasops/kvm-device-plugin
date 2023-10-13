@@ -1,0 +1,71 @@
+fullnameOverride: ""
+nameOverride: ""
+namespaceOverride: ""
+
+replicaCount: 1
+
+image:
+  repository: kaasops/kvm-device-plugin
+  tag: "" # rewrites Chart.AppVersion
+  pullPolicy: IfNotPresent
+
+strategy: {}
+# rollingUpdate:
+#  maxSurge: 25%
+#  maxUnavailable: 25%
+# type: RollingUpdate
+
+imagePullSecrets: []
+
+securityContext: {}
+  # allowPrivilegeEscalation: false
+  # runAsGroup: 1000
+  # runAsNonRoot: true
+  # readOnlyRootFilesystem: true
+  # seccompProfile:
+  #   type: RuntimeDefault
+  # capabilities:
+  #   drop:
+  #     - ALL
+
+podSecurityContext: {}
+
+envs: {}
+
+tolerations: {}
+
+resources:
+  limits:
+    cpu: 200m
+    memory: 300Mi
+  requests:
+    cpu: 100m
+    memory: 50Mi
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name:
+
+rbac:
+  create: true
+  annotations: {}
+  extraLabels: {}
+
+# extra Labels for Pods, Deployment
+extraLabels: {}
+
+# Annotations to be added to the deployment
+annotations: {}
+
+args:
+
+secrets: {}
+# - name: elastic-creds
+#   data:
+#     username: "logstash"
+#     password: "password"
