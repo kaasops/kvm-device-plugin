@@ -3,9 +3,9 @@ entries:
   kvm-device-plugin:
   - apiVersion: v2
     appVersion: v1.0.0
-    created: "2023-10-16T09:53:23.93810075+03:00"
+    created: "2023-10-16T10:10:20.801116469+03:00"
     description: A Helm chart to install kvm-device-plugin
-    digest: 0c6af50586a6e4867a4291384d3b6521143bd0d243cf458bec48da3816a9e28d
+    digest: 2e0e1d328bfe79b1bef3c75c91c4de326072fd162e1e966c3441a6b5540dbadb
     home: https://github.com/kaasops/kvm-device-plugin
     name: kvm-device-plugin
     sources:
@@ -14,4 +14,4 @@ entries:
     urls:
     - https://kaasops.github.io/kvm-device-plugin/helm/packages/kvm-device-plugin-v1.0.0.tgz
     version: v1.0.0
-generated: "2023-10-16T09:53:23.937787995+03:00"
+generated: "2023-10-16T10:10:20.800755104+03:00"
